@@ -682,7 +682,6 @@ disp["CO₂ (kg CO₂e/kg)"] = (
 styled = (
     disp.style
 
-    # gradient khusus kolom CO2
     .background_gradient(
         subset=["CO₂ (kg CO₂e/kg)"],
         cmap="RdYlGn_r",
@@ -690,12 +689,10 @@ styled = (
         vmax=20
     )
 
-    # format angka
     .format({
         "CO₂ (kg CO₂e/kg)": "{:.2f}"
     })
 
-    # table styling
     .set_table_styles([
         {
             "selector": "th",
@@ -704,19 +701,18 @@ styled = (
                 ("color", "#0a4f2e"),
                 ("font-weight", "700"),
                 ("font-size", "14px"),
-                ("border", "1px solid #d7eadf"),
                 ("padding", "12px"),
-                ("text-align", "left")
+                ("border", "1px solid #dfeee5"),
             ]
         },
 
         {
             "selector": "td",
             "props": [
-                ("border", "1px solid #edf3ee"),
                 ("padding", "10px"),
+                ("border", "1px solid #edf3ee"),
                 ("font-size", "13px"),
-                ("color", "#183c2a")
+                ("color", "#183c2a"),
             ]
         },
 
@@ -724,19 +720,19 @@ styled = (
             "selector": "table",
             "props": [
                 ("border-collapse", "collapse"),
+                ("width", "100%"),
+                ("background-color", "white"),
                 ("border-radius", "14px"),
                 ("overflow", "hidden"),
-                ("background-color", "white")
             ]
         }
     ])
 )
 
-# render
-st.dataframe(
-    styled,
-    use_container_width=True,
-    height=520
+# render HTML instead of st.dataframe
+st.markdown(
+    styled.to_html(),
+    unsafe_allow_html=True
 )
 
 st.caption(f"Showing {len(disp)} items")
