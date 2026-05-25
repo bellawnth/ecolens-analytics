@@ -182,38 +182,6 @@ footer { visibility:hidden; }
 </style>
 """, unsafe_allow_html=True)
 
-# ── White Table Background ─────────────────────────────
-
-st.markdown("""
-<style>
-
-/* background tabel utama */
-[data-testid="stDataFrame"] {
-    background-color: white;
-}
-
-/* isi tabel */
-[data-testid="stDataFrame"] div {
-    background-color: white !important;
-    color: black !important;
-}
-
-/* header tabel */
-[data-testid="stDataFrame"] thead tr th {
-    background-color: #f3f4f6 !important;
-    color: black !important;
-    font-weight: 600;
-}
-
-/* row tabel */
-[data-testid="stDataFrame"] tbody tr td {
-    background-color: white !important;
-    color: black !important;
-}
-
-</style>
-""", unsafe_allow_html=True)
-
 # ── Colors ────────────────────────────────────────────────────────────────────
 INK     = "#0d2116"
 G1,G2,G3,G4,G5,G6 = "#0a4f2e","#1a7a47","#2da562","#3ecc7a","#72dfa0","#aff0c8"
@@ -738,7 +706,28 @@ disp["CO₂ (kg CO₂e/kg)"] = (
 )
 
 # ── Render Table ───────────────────────────────────────
+st.markdown("""
+<style>
 
+/* dataframe container */
+[data-testid="stDataFrame"] {
+    background-color: white !important;
+}
+
+/* header */
+[data-testid="stDataFrame"] thead th {
+    background-color: #f1f5f9 !important;
+    color: black !important;
+}
+
+/* cells */
+[data-testid="stDataFrame"] tbody td {
+    background-color: white !important;
+    color: black !important;
+}
+
+</style>
+""", unsafe_allow_html=True)
 st.dataframe(
     disp,
     use_container_width=True,
