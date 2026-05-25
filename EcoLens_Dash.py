@@ -623,32 +623,122 @@ fig_sc.update_layout(**COMMON,
 st.plotly_chart(fig_sc, use_container_width=True)
 
 # ── Row 5: Data Table ─────────────────────────────────────────────────────────
-st.markdown('<div class="sec">📋 Full Food Emission Database</div>', unsafe_allow_html=True)
+st.markdown(
+    '<div class="sec">📋 Full Food Emission Database</div>',
+    unsafe_allow_html=True
+)
+
 c1, c2 = st.columns([3, 1])
+
 with c1:
-    search = st.text_input("🔍 Search food item", placeholder="e.g. chicken, tofu, beef…")
+    search = st.text_input(
+        "🔍 Search food item",
+        placeholder="e.g. chicken, tofu, beef…"
+    )
+
 with c2:
-    sort_order = st.selectbox("Sort", ["Highest first", "Lowest first", "Alphabetical"])
+    sort_order = st.selectbox(
+        "Sort",
+        ["Highest first", "Lowest first", "Alphabetical"]
+    )
 
 show_df = filtered.copy()
+
 if search:
-    show_df = show_df[show_df["nama"].str.lower().str.contains(search.lower(), na=False)]
+    show_df = show_df[
+        show_df["nama"]
+        .str.lower()
+        .str.contains(search.lower(), na=False)
+    ]
+
 if sort_order == "Highest first":
     show_df = show_df.sort_values("emisi", ascending=False)
+
 elif sort_order == "Lowest first":
     show_df = show_df.sort_values("emisi", ascending=True)
+
 else:
     show_df = show_df.sort_values("nama")
 
 show_df = show_df.reset_index(drop=True)
 show_df.index += 1
-disp = show_df[["nama","kategori","emisi"]].copy()
-disp.columns = ["Food Item", "Category", "CO₂ (kg CO₂e/kg)"]
-st.dataframe(
-    disp,
-    use_container_width=True,
-    height=380,
+
+disp = show_df[["nama", "kategori", "emisi"]].copy()
+
+disp.columns = [
+    "Food Item",
+    "Category",
+    "CO₂ (kg CO₂e/kg)"
+]
+
+# format number
+disp["CO₂ (kg CO₂e/kg)"] = (
+    disp["CO₂ (kg CO₂e/kg)"]
+    .astype(float)
 )
+
+# ── Styled Table ─────────────────────────────────────────────
+
+styled = (
+    disp.style
+
+    # gradient khusus kolom CO2
+    .background_gradient(
+        subset=["CO₂ (kg CO₂e/kg)"],
+        cmap="RdYlGn_r",
+        vmin=0,
+        vmax=20
+    )
+
+    # format angka
+    .format({
+        "CO₂ (kg CO₂e/kg)": "{:.2f}"
+    })
+
+    # table styling
+    .set_table_styles([
+        {
+            "selector": "th",
+            "props": [
+                ("background-color", "#eef7f0"),
+                ("color", "#0a4f2e"),
+                ("font-weight", "700"),
+                ("font-size", "14px"),
+                ("border", "1px solid #d7eadf"),
+                ("padding", "12px"),
+                ("text-align", "left")
+            ]
+        },
+
+        {
+            "selector": "td",
+            "props": [
+                ("border", "1px solid #edf3ee"),
+                ("padding", "10px"),
+                ("font-size", "13px"),
+                ("color", "#183c2a")
+            ]
+        },
+
+        {
+            "selector": "table",
+            "props": [
+                ("border-collapse", "collapse"),
+                ("border-radius", "14px"),
+                ("overflow", "hidden"),
+                ("background-color", "white")
+            ]
+        }
+    ])
+)
+
+# render
+st.dataframe(
+    styled,
+    use_container_width=True,
+    height=520
+)
+
 st.caption(f"Showing {len(disp)} items")
 
 # ── Row 6: Smart Swaps ────────────────────────────────────────────────────────
