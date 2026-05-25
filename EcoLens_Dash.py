@@ -623,6 +623,7 @@ fig_sc.update_layout(**COMMON,
 st.plotly_chart(fig_sc, use_container_width=True)
 
 # ── Row 5: Data Table ─────────────────────────────────────────────────────────
+
 st.markdown(
     '<div class="sec">📋 Full Food Emission Database</div>',
     unsafe_allow_html=True
@@ -641,6 +642,8 @@ with c2:
         "Sort",
         ["Highest first", "Lowest first", "Alphabetical"]
     )
+
+# ── Filtering ─────────────────────────────────────────────
 
 show_df = filtered.copy()
 
@@ -663,7 +666,9 @@ else:
 show_df = show_df.reset_index(drop=True)
 show_df.index += 1
 
-disp = show_df[["nama", "kategori", "emisi"]].copy()
+# ── Display Table ─────────────────────────────────────────
+
+disp = show_df[["nama", "kategori", "emisi"]].head(100).copy()
 
 disp.columns = [
     "Food Item",
@@ -671,13 +676,13 @@ disp.columns = [
     "CO₂ (kg CO₂e/kg)"
 ]
 
-# format number
+# format decimal
 disp["CO₂ (kg CO₂e/kg)"] = (
     disp["CO₂ (kg CO₂e/kg)"]
     .astype(float)
 )
 
-# ── Styled Table ─────────────────────────────────────────────
+# ── Styled Table ─────────────────────────────────────────
 
 styled = (
     disp.style
@@ -693,7 +698,16 @@ styled = (
         "CO₂ (kg CO₂e/kg)": "{:.2f}"
     })
 
+    .set_properties(**{
+        "background-color": "white",
+        "color": "#183c2a",
+        "border-color": "#e6f2ea",
+        "font-size": "13px",
+        "padding": "10px",
+    })
+
     .set_table_styles([
+
         {
             "selector": "th",
             "props": [
@@ -702,17 +716,8 @@ styled = (
                 ("font-weight", "700"),
                 ("font-size", "14px"),
                 ("padding", "12px"),
-                ("border", "1px solid #dfeee5"),
-            ]
-        },
-
-        {
-            "selector": "td",
-            "props": [
-                ("padding", "10px"),
-                ("border", "1px solid #edf3ee"),
-                ("font-size", "13px"),
-                ("color", "#183c2a"),
+                ("border", "1px solid #dcefe3"),
+                ("text-align", "left"),
             ]
         },
 
@@ -722,14 +727,14 @@ styled = (
                 ("border-collapse", "collapse"),
                 ("width", "100%"),
                 ("background-color", "white"),
-                ("border-radius", "14px"),
-                ("overflow", "hidden"),
             ]
         }
+
     ])
 )
 
-# render HTML instead of st.dataframe
+# ── Render HTML ─────────────────────────────────────────
+
 st.markdown(
     styled.to_html(),
     unsafe_allow_html=True
