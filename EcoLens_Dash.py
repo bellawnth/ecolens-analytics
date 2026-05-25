@@ -623,38 +623,96 @@ fig_sc.update_layout(**COMMON,
 st.plotly_chart(fig_sc, use_container_width=True)
 
 # ── Row 5: Data Table ─────────────────────────────────────────────────────────
-st.markdown('<div class="sec">📋 Full Food Emission Database</div>', unsafe_allow_html=True)
+
+st.markdown(
+    '<div class="sec">📋 Full Food Emission Database</div>',
+    unsafe_allow_html=True
+)
+
 c1, c2 = st.columns([3, 1])
+
 with c1:
-    search = st.text_input("🔍 Search food item", placeholder="e.g. chicken, tofu, beef…")
+    search = st.text_input(
+        "🔍 Search food item",
+        placeholder="e.g. chicken, tofu, beef…"
+    )
+
 with c2:
-    sort_order = st.selectbox("Sort", ["Highest first", "Lowest first", "Alphabetical"])
+    sort_order = st.selectbox(
+        "Sort",
+        ["Highest first", "Lowest first", "Alphabetical"]
+    )
+
+# ── Filter ─────────────────────────────────────────────
 
 show_df = filtered.copy()
+
 if search:
-    show_df = show_df[show_df["nama"].str.lower().str.contains(search.lower(), na=False)]
+    show_df = show_df[
+        show_df["nama"]
+        .str.lower()
+        .str.contains(search.lower(), na=False)
+    ]
+
 if sort_order == "Highest first":
     show_df = show_df.sort_values("emisi", ascending=False)
+
 elif sort_order == "Lowest first":
     show_df = show_df.sort_values("emisi", ascending=True)
+
 else:
     show_df = show_df.sort_values("nama")
 
 show_df = show_df.reset_index(drop=True)
 show_df.index += 1
-disp = show_df[["nama","kategori","emisi"]].copy()
-disp.columns = ["Food Item", "Category", "CO₂ (kg CO₂e/kg)"]
+
+# ── Create Color Indicator ─────────────────────────────
+
+def emission_level(x):
+
+    if x >= 15:
+        return "🔴 Very High"
+
+    elif x >= 8:
+        return "🟠 High"
+
+    elif x >= 3:
+        return "🟡 Moderate"
+
+    elif x >= 1:
+        return "🟢 Low"
+
+    else:
+        return "🌿 Very Low"
+
+# ── Display Data ───────────────────────────────────────
+
+disp = show_df[
+    ["nama", "kategori", "emisi"]
+].head(100).copy()
+
+disp.columns = [
+    "Food Item",
+    "Category",
+    "CO₂ (kg CO₂e/kg)"
+]
+
+disp["Impact Level"] = disp["CO₂ (kg CO₂e/kg)"].apply(emission_level)
+
+disp["CO₂ (kg CO₂e/kg)"] = (
+    disp["CO₂ (kg CO₂e/kg)"]
+    .astype(float)
+    .map(lambda x: f"{x:.2f}")
+)
+
+# ── Render Table ───────────────────────────────────────
+
 st.dataframe(
-    disp.style
-        .background_gradient(
-    subset=["CO₂ (kg CO₂e/kg)"],
-    cmap="RdYlGn_r",
-    vmin=0,
-    vmax=20
+    disp,
+    use_container_width=True,
+    height=520
 )
-        .format({"CO₂ (kg CO₂e/kg)": "{:.4f}"}),
-    use_container_width=True, height=380,
-)
+
 st.caption(f"Showing {len(disp)} items")
 
 # ── Row 6: Smart Swaps ────────────────────────────────────────────────────────
