@@ -707,8 +707,49 @@ disp["CO₂ (kg CO₂e/kg)"] = (
 
 # ── Render Table ───────────────────────────────────────
 
+# ── Styled Table ───────────────────────────────────────
+
+styled_df = (
+    disp.style
+
+    # gradient warna CO2
+    .background_gradient(
+        subset=["CO₂ (kg CO₂e/kg)"],
+        cmap="RdYlGn_r"
+    )
+
+    # seluruh tabel putih
+    .set_properties(**{
+        "background-color": "#ffffff",
+        "color": "#0d2116",
+        "border-color": "#dceee3",
+        "font-size": "14px"
+    })
+
+    # header tabel
+    .set_table_styles([
+        {
+            "selector": "th",
+            "props": [
+                ("background-color", "#e8f5ec"),
+                ("color", "#0a4f2e"),
+                ("font-weight", "bold"),
+                ("border", "1px solid #dceee3"),
+                ("font-size", "14px"),
+            ]
+        },
+
+        {
+            "selector": "td",
+            "props": [
+                ("border", "1px solid #eef5f0")
+            ]
+        }
+    ])
+)
+
 st.dataframe(
-    disp,
+    styled_df,
     use_container_width=True,
     height=520
 )
