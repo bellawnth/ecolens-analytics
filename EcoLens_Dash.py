@@ -645,15 +645,9 @@ show_df.index += 1
 disp = show_df[["nama","kategori","emisi"]].copy()
 disp.columns = ["Food Item", "Category", "CO₂ (kg CO₂e/kg)"]
 st.dataframe(
-    disp.style
-        .background_gradient(
-    subset=["CO₂ (kg CO₂e/kg)"],
-    cmap="RdYlGn_r",
-    vmin=0,
-    vmax=20
-)
-        .format({"CO₂ (kg CO₂e/kg)": "{:.4f}"}),
-    use_container_width=True, height=380,
+    disp,
+    use_container_width=True,
+    height=380,
 )
 st.caption(f"Showing {len(disp)} items")
 
