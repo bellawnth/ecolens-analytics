@@ -707,29 +707,6 @@ disp["CO₂ (kg CO₂e/kg)"] = (
 
 # ── Render Table ───────────────────────────────────────
 
-st.markdown("""
-<style>
-
-/* background tabel */
-[data-testid="stDataFrame"] {
-    background-color: white !important;
-}
-
-/* isi tabel */
-[data-testid="stDataFrame"] div {
-    background-color: white !important;
-    color: #0d2116 !important;
-}
-
-/* header tabel */
-[data-testid="stDataFrame"] thead tr th {
-    background-color: #e8f5ec !important;
-    color: #0a4f2e !important;
-}
-
-</style>
-""", unsafe_allow_html=True)
-
 st.dataframe(
     disp,
     use_container_width=True,
