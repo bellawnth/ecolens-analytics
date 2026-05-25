@@ -49,7 +49,6 @@ html, body, [class*="css"], p, span, div, label, .stMarkdown {
 }
 .stApp { background: var(--bg) !important; }
 
-/* ── fix ALL plotly SVG text to dark ink ── */
 .js-plotly-plot svg text,
 .js-plotly-plot .xtick text,
 .js-plotly-plot .ytick text,
@@ -241,7 +240,7 @@ HOVER_STYLE = dict(
 # ── Data ─────────────────────────────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    df = pd.read_csv("/Users/bellawantah/Downloads/final_dataset_footprint_emission.csv")
+    df = pd.read_csv('final_dataset_footprint_emission.csv')
     df["emisi"] = pd.to_numeric(df["emisi"], errors="coerce")
     return df.dropna(subset=["emisi"])
 
