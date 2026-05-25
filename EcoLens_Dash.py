@@ -643,7 +643,7 @@ with c2:
         ["Highest first", "Lowest first", "Alphabetical"]
     )
 
-# ── Filtering ─────────────────────────────────────────────
+# ── Filter ─────────────────────────────────────────────
 
 show_df = filtered.copy()
 
@@ -666,9 +666,30 @@ else:
 show_df = show_df.reset_index(drop=True)
 show_df.index += 1
 
-# ── Display Table ─────────────────────────────────────────
+# ── Create Color Indicator ─────────────────────────────
 
-disp = show_df[["nama", "kategori", "emisi"]].head(100).copy()
+def emission_level(x):
+
+    if x >= 15:
+        return "🔴 Very High"
+
+    elif x >= 8:
+        return "🟠 High"
+
+    elif x >= 3:
+        return "🟡 Moderate"
+
+    elif x >= 1:
+        return "🟢 Low"
+
+    else:
+        return "🌿 Very Low"
+
+# ── Display Data ───────────────────────────────────────
+
+disp = show_df[
+    ["nama", "kategori", "emisi"]
+].head(100).copy()
 
 disp.columns = [
     "Food Item",
@@ -676,68 +697,20 @@ disp.columns = [
     "CO₂ (kg CO₂e/kg)"
 ]
 
-# format decimal
+disp["Impact Level"] = disp["CO₂ (kg CO₂e/kg)"].apply(emission_level)
+
 disp["CO₂ (kg CO₂e/kg)"] = (
     disp["CO₂ (kg CO₂e/kg)"]
     .astype(float)
+    .map(lambda x: f"{x:.2f}")
 )
 
-# ── Styled Table ─────────────────────────────────────────
+# ── Render Table ───────────────────────────────────────
 
-styled = (
-    disp.style
-
-    .background_gradient(
-        subset=["CO₂ (kg CO₂e/kg)"],
-        cmap="RdYlGn_r",
-        vmin=0,
-        vmax=20
-    )
-
-    .format({
-        "CO₂ (kg CO₂e/kg)": "{:.2f}"
-    })
-
-    .set_properties(**{
-        "background-color": "white",
-        "color": "#183c2a",
-        "border-color": "#e6f2ea",
-        "font-size": "13px",
-        "padding": "10px",
-    })
-
-    .set_table_styles([
-
-        {
-            "selector": "th",
-            "props": [
-                ("background-color", "#eef7f0"),
-                ("color", "#0a4f2e"),
-                ("font-weight", "700"),
-                ("font-size", "14px"),
-                ("padding", "12px"),
-                ("border", "1px solid #dcefe3"),
-                ("text-align", "left"),
-            ]
-        },
-
-        {
-            "selector": "table",
-            "props": [
-                ("border-collapse", "collapse"),
-                ("width", "100%"),
-                ("background-color", "white"),
-            ]
-        }
-
-    ])
-)
-
-# ── Render HTML ─────────────────────────────────────────
-
-st.markdown(
-    styled.to_html(),
-    unsafe_allow_html=True
+st.dataframe(
+    disp,
+    use_container_width=True,
+    height=520
 )
 
 st.caption(f"Showing {len(disp)} items")
