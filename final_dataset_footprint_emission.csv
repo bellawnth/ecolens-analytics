@@ -1,0 +1,291 @@
+no,nama,emisi,kategori
+1,(1/2 Cup Ice Cream),1.086965,Dairy Products
+2,Almonds,1.944884,Nuts & Seeds
+3,Apple,0.15,Fruits
+4,Apple Betty,0.363983,Sweets & Desserts
+5,Apple Juice Canned,0.31,Fruits
+6,Apples Raw,0.31,Fruits
+7,Apricot Nectar,0.331959,Beverages
+8,Apricots,0.36,Fruits
+9,Apricots 209G,0.32914,Fruits
+10,Asparagus,0.97,Vegetables
+11,Ayam Goreng,5.86,Fast Food
+12,Baby Food Jar With Banana,0.672144,Sweets & Desserts
+13,Baby Food Jar With Banana 443G,0.670198,Sweets & Desserts
+14,Baby Food Jar Without Banana,0.672144,Sweets & Desserts
+15,Bacon,4.03,Meat & Poultry
+16,Bacon 758G,3.030185,Meat & Poultry
+17,Bagel,0.789193,Bakery Products
+18,Baked With Cheese,9.29,Grains & Cereals
+19,Baked With Cheese 495G,9.343605,Grains & Cereals
+20,Bakso,10.7,Mixed Dishes
+21,Banana,0.805,Fruits
+22,Banana Nectar,0.467522,Beverages
+23,Barley,1.18,Grains & Cereals
+24,Barley Flour,0.719792,Grains & Cereals
+25,Barley Flour 200G,0.713572,Grains & Cereals
+26,Bean Soups,0.528252,Soups
+27,Beans,0.67,Vegetables
+28,Beef (Beef Herd),99.48,Meat & Poultry
+29,Beef (Dairy Herd),33.3,Meat & Poultry
+30,Beet Sugar,1.81,Sweeteners
+31,Berries & Grapes,1.53,Fruits
+32,Boiled Apricots,0.35754,Fruits
+33,Boiled Orange Nectar,0.937306,Beverages
+34,Boiled Raisins,0.631411,Fruits
+35,Bran Grain Bread,0.67754,Bakery Products
+36,Brassicas,0.51,Vegetables
+37,Bread Cracked Wheat,0.749008,Grains & Cereals
+38,Burger,4.36,Fast Food
+39,Cane Sugar,3.2,Sweeteners
+40,Canned Almonds,2.08743,Nuts & Seeds
+41,Canned Olivesripe,0.517473,Fruits
+42,Capcay,1.374,Mixed Dishes
+43,Carrot Raw,0.359642,Vegetables
+44,Carrots,0.23,Vegetables
+45,Carrots 220G,0.243044,Vegetables
+46,Cassava,1.32,Root Crops
+47,Cauliflower,0.32,Vegetables
+48,Celery,0.32,Vegetables
+49,Celery Salt,0.585756,Condiments & Sauces
+50,Celery Salt 154G,0.682407,Condiments & Sauces
+51,Cheese,23.88,Dairy Products
+52,Cheeseburger,18.8,Fast Food
+53,Cherry Pie,0.49,Sweets & Desserts
+54,Chocolate,46.65,Sweets & Desserts
+55,Chocolate Chip Cookie,6.27,Sweets & Desserts
+56,Chocolate Creams,6.6,Sweets & Desserts
+57,Chocolate Fudge,6.6,Sweets & Desserts
+58,Chocolate Syrup,5.708613,Sweets & Desserts
+59,Citrus Fruit,0.39,Fruits
+60,Coconut Milk Or Coconut Cream,0.506467,Beverages
+61,Coconut Milk Or Coconut Cream 838G,0.477437,Beverages
+62,Cod,3.29,Fish & Seafood
+63,Coffee,28.53,Beverages
+64,Cooked Bacon,4.170135,Meat & Poultry
+65,Cooked Bean Sprouts,0.667371,Vegetables
+66,Cooked Chocolate Fudge,6.761143,Sweets & Desserts
+67,Cooked Wheat Meal Cereal Unrefined,0.590436,Grains & Cereals
+68,Cranberry Sauce Sweetened,0.9,Fruits
+69,Cranberry Sauce Sweetened 693G,0.82162,Fruits
+70,Cream Cheese,5.34,Dairy Products
+71,Cream Or Half-And-Half,5.34,Dairy Products
+72,Cream Soups 484G,5.438507,Soups
+73,Cucumbers,0.32,Vegetables
+74,Dates,0.6,Fruits
+75,Dates 885G,0.748374,Fruits
+76,Donat,1.06,Bakery Products
+77,Dried Banana Nectar,0.414907,Beverages
+78,Dried Processed Cheese,10.629113,Dairy Products
+79,Eggs,0.53,Eggs
+80,European As Muscat Tokay,0.58,Fruits
+81,Figs,0.31,Fruits
+82,Figs Canned With Syrup,0.31,Fruits
+83,Fish (Farmed),13.63,Fish & Seafood
+84,Fresh Raw Figs,0.265684,Fruits
+85,Fresh Steamed Peas,0.58,Vegetables
+86,Fried Chocolate Creams,6.660037,Sweets & Desserts
+87,Fried Goats' Milk,0.786727,Dairy Products
+88,Fried Scalloped With Cheese Potatoes,9.31055,Vegetables
+89,Fried Wheat (All Purpose),0.616792,Grains & Cereals
+90,Frozen Bean Soups,0.754993,Soups
+91,Frozen Limeade Concentrate Frozen,0.175928,Fruits
+92,Frozen Pumpkin Pie,0.356367,Sweets & Desserts
+93,Fruit-Based Beverage For Baby From 4/6 Months,0.794438,Dairy Products
+94,Ginger Ale,0.88,Beverages
+95,Gingerbread,0.88,Sweets & Desserts
+96,Gingerbread 100G,0.723868,Sweets & Desserts
+97,Goats' Milk,0.7,Dairy Products
+98,Grapes,0.39,Fruits
+99,Grilled Banana Nectar,0.495198,Beverages
+100,Grilled Chocolate Fudge,5.554198,Sweets & Desserts
+101,Grilled Fruit-Based Beverage For Baby From 4/6 Months,0.803693,Dairy Products
+102,Grilled Lemonade Concentratefrozen,0.20714,Fruits
+103,Grilled Potatoes Baked,0.213336,Vegetables
+104,Grilled Smoothie,0.788025,Beverages
+105,Groundnuts,3.23,Nuts & Seeds
+106,Heated Peas,0.58,Vegetables
+107,Heated Peas 513G,0.660956,Vegetables
+108,Homemade Celery,0.324259,Vegetables
+109,Homemade Mango Nectar,0.601154,Beverages
+110,Homemade Pineapple,0.31682,Fruits
+111,Homemade Pumpkin Pie,0.28315,Sweets & Desserts
+112,Homemade Rye,0.384133,Grains & Cereals
+113,Homemade Soybeans,0.623618,Vegetables
+114,Homemade Wheat (Whole),0.682084,Grains & Cereals
+115,Ice Cream,1.02,Dairy Products
+116,Ice Cream 555G,1.015158,Dairy Products
+117,Ikan Goreng,13.64,Fish & Seafood
+118,Instant Apple Juice Canned,0.337972,Fruits
+119,Instant Chocolate Fudge,5.504823,Sweets & Desserts
+120,Instant Pineapple,0.273635,Fruits
+121,Instant Sweet Potatoes,0.257792,Vegetables
+122,Instant Syrup For Canned Fruits In Syrup,0.63466,Mixed Dishes
+123,Instant Whole-Wheat,0.621809,Grains & Cereals
+124,Kentang Goreng,3.63,Fast Food
+125,Kiwi,0.32,Fruits
+126,Lamb & Mutton,39.72,Meat & Poultry
+127,Lemon Juice,0.22,Fruits
+128,Lemon Juice 259G,0.179499,Fruits
+129,Lemon Meringue,0.22,Sweets & Desserts
+130,Lemonade Concentratefrozen,0.22,Fruits
+131,Lemonade With A Flavoured Syrup,0.559414,Beverages
+132,Lemonade Without Sugar With Artificial Sweetener(S),0.532479,Beverages
+133,Lentils,1.03,Vegetables
+134,Light Syrup For Canned Fruits In Syrup,0.728932,Mixed Dishes
+135,Limeade Concentrate Frozen,0.22,Fruits
+136,Lobster,19.3,Fish & Seafood
+137,Local Cod,2.976974,Fish & Seafood
+138,Local Olivesripe,0.696483,Fruits
+139,Local Peppers With Beef And Crumbs,0.570377,Vegetables
+140,Local Walnuts,2.150977,Nuts & Seeds
+141,Maize,1.7,Grains & Cereals
+142,Maize/Corn Bran,0.512282,Mixed Dishes
+143,Maize/Corn Flour,0.737279,Grains & Cereals
+144,Mayonnaise,2.04,Fats & Oils
+145,Mayonnaise 923G,2.099655,Fats & Oils
+146,Mie Goreng,0.5,Mixed Dishes
+147,Milk,3.15,Dairy Products
+148,Milk Chocolate,3.6,Sweets & Desserts
+149,Mineral Still Water (Aix-Les-Bains) Bottled Lightly Mineralized,0.35144,Beverages
+150,Mineral Still Water (Montcalm) Bottled Very Lightly Mineralized,0.27926,Beverages
+151,Mineral Still Water (St-Amand) Bottled Averagely Mineralized,0.292426,Beverages
+152,Nasi Goreng,12.535,Mixed Dishes
+153,Nasi Putih,0.64,Grains & Cereals
+154,Noodles,3.44,Grains & Cereals
+155,Nugget,4.11,Meat & Poultry
+156,Nuts,0.43,Nuts & Seeds
+157,Oat Bran,0.650655,Mixed Dishes
+158,Oatmeal,2.48,Grains & Cereals
+159,Olive Oil,3.84,Fats & Oils
+160,Olive Oil 390G,4.612502,Fats & Oils
+161,Olives Large,0.59,Fruits
+162,Olives Large 244G,0.607344,Fruits
+163,Onions & Leeks,0.5,Vegetables
+164,Orange Juice,0.598298,Fruits
+165,Orange Nectar,0.872551,Beverages
+166,Organic Cream Soups,4.802229,Soups
+167,Organic Maize/Corn Flour,0.820064,Grains & Cereals
+168,Other Fruit,1.05,Fruits
+169,Other Pulses,1.79,Legumes
+170,Other Vegetables,0.53,Vegetables
+171,Peaches,0.43,Fruits
+172,Peanut Butter,1.15,Nuts & Seeds
+173,Peanut Butter Natural,1.15,Nuts & Seeds
+174,Peanut Butter Natural 612G,1.211247,Nuts & Seeds
+175,Peanuts,0.547216,Nuts & Seeds
+176,Pears,0.254991,Fruits
+177,Peas,0.98,Legumes
+178,Pempek,12.47,Fish & Seafood
+179,Peppers Canned,0.58,Vegetables
+180,Peppers Raw Green Sweet,0.58,Vegetables
+181,Peppers With Beef And Crumbs,0.58,Vegetables
+182,Pig Meat,12.31,Meat & Poultry
+183,Pineapple Crushed,0.31,Fruits
+184,Pineapple Juice,0.31,Fruits
+185,Pineapples,0.31,Fruits
+186,Pizza,7.91,Fast Food
+187,Plums,0.27,Fruits
+188,Plums 769G,0.222582,Fruits
+189,Potato Chips,0.25,Vegetables
+190,Potatoes,0.46,Root Crops
+191,Potatoes Baked,0.25,Vegetables
+192,Potatoes Baked 335G,0.268654,Vegetables
+193,Potatoes Mashed With Milk And Butter,0.25,Vegetables
+194,Potatoes Pan-Tried,0.25,Vegetables
+195,Potatoes Pan-Tried 877G,0.304373,Vegetables
+196,Poultry Meat,9.87,Meat & Poultry
+197,Prawns (Farmed),26.87,Fish & Seafood
+198,Premium Beans,0.650271,Vegetables
+199,Premium European As Muscat Tokay,0.52322,Fruits
+200,Premium Peanut Butter,1.080042,Nuts & Seeds
+201,Premium Wheat Germ,0.676999,Grains & Cereals
+202,Prepacked Apple Juice Canned,0.314249,Fruits
+203,Prepacked Cucumbers,0.352625,Vegetables
+204,Prepacked Lemonade Concentratefrozen,0.197371,Fruits
+205,Prepacked Peanut Butter Natural,1.105556,Nuts & Seeds
+206,Prepacked Steamed Potatoes Before Peeling,0.245729,Vegetables
+207,Prepacked Whole-Wheat,0.739607,Grains & Cereals
+208,Processed Cheese,9.29,Dairy Products
+209,Processed Cheese 738G,11.017867,Dairy Products
+210,Pumpkin Pie,0.38,Sweets & Desserts
+211,Pumpkin Pie 806G,0.475413,Sweets & Desserts
+212,Raisins,0.66,Fruits
+213,Raisins 680G,0.535638,Fruits
+214,Raw Cod,3.396776,Fish & Seafood
+215,Raw Maize/Corn Flour,0.827258,Grains & Cereals
+216,Raw Oatmeal,0.714665,Grains & Cereals
+217,Raw Shredded Wheat Biscuit,0.662835,Grains & Cereals
+218,Raw Topping Sauce For Pizza,0.677853,Condiments & Sauces
+219,Ready-To-Eat Maize/Corn Flour,0.845591,Grains & Cereals
+220,Ready-To-Eat Potatoes Baked,0.222335,Vegetables
+221,Ready-To-Eat Shredded Wheat Biscuit,0.649129,Grains & Cereals
+222,Ready-To-Eat Split Cooked Peas,0.462204,Vegetables
+223,Rendang Sapi,0.708,Mixed Dishes
+224,Roasted Mango Nectar,0.620329,Beverages
+225,Roasted Peanut Butter,1.051288,Nuts & Seeds
+226,Roasted Pineapple,0.371956,Fruits
+227,Roasted Wheat Meal Cereal Unrefined,0.763112,Grains & Cereals
+228,Root Vegetables,0.43,Root Crops
+229,Rye,0.41,Grains & Cereals
+230,Saccharin Sweetener,0.780927,Sweeteners
+231,Salmon,3.8,Fish & Seafood
+232,Salsify Frozen Raw,0.663634,Vegetables
+233,Sardines,0.9,Fish & Seafood
+234,Sate,1.06,Meat & Poultry
+235,Scalloped With Cheese Potatoes,9.29,Vegetables
+236,Shredded Wheat Biscuit,0.67,Grains & Cereals
+237,Smoothie,0.694181,Beverages
+238,Soy Milk,0.98,Plant-Based Protein
+239,Soybeans,0.67,Vegetables
+240,Spaghetti,1.98,Mixed Dishes
+241,Spinach,0.27,Vegetables
+242,Spinach 889G,0.524402,Vegetables
+243,Split Cooked Peas,0.58,Vegetables
+244,Split-Pea Soup,0.58,Soups
+245,Steak,55.55,Meat & Poultry
+246,Steamed Mayonnaise,2.011689,Fats & Oils
+247,Steamed Onions,0.234177,Vegetables
+248,Steamed Potatoes Baked,0.258147,Vegetables
+249,Steamed Potatoes Before Peeling,0.25,Vegetables
+250,Steamed Sweet Potatoes,0.242628,Vegetables
+251,Steamed Tapioca Cream Pudding,5.483465,Sweets & Desserts
+252,Strawberries,1.75,Fruits
+253,Strawberry,0.57,Fruits
+254,Sweet Potatoes,0.25,Vegetables
+255,Syrup For Canned Fruits In Syrup,0.728932,Mixed Dishes
+256,Tahu Goreng,4.0705,Plant-Based Protein
+257,Tapioca Cream Pudding,5.34,Sweets & Desserts
+258,Telur Goreng,11.895,Eggs
+259,Telur Rebus,2.74,Eggs
+260,Tempe Goreng,3.762886,Plant-Based Protein
+261,Tempeh,0.32355,Plant-Based Protein
+262,Terong Balado,11.71,Mixed Dishes
+263,Tofu,0.35,Plant-Based Protein
+264,Tomato Catsup,0.48,Vegetables
+265,Tomato Catsup 170G,0.417731,Vegetables
+266,Tomato Juice,0.48,Vegetables
+267,Tomato Sauce For Pizza Base,0.718294,Mixed Dishes
+268,Tomato Soup,0.48,Soups
+269,Tomatoes,2.09,Vegetables
+270,Topping Sauce For Pizza,0.718294,Condiments & Sauces
+271,Tumis Kangkung,1.374,Mixed Dishes
+272,Tuna,4.68,Fish & Seafood
+273,Turnip Cabbage Raw,0.47924,Vegetables
+274,Uncreamed,5.34,Dairy Products
+275,Vegetable Dish For Baby With Starch From 6-8 Months,0.716286,Mixed Dishes
+276,Veggie Burger,2.71,Plant-Based Protein
+277,Walnuts,1.75,Nuts & Seeds
+278,Walnuts 320G,1.642897,Nuts & Seeds
+279,Water Mineral Carbonated Ou Non-Carbonated Carola,0.213843,Beverages
+280,Wheat & Rye,1.57,Grains & Cereals
+281,Wheat (All Purpose),0.67,Grains & Cereals
+282,Wheat (Whole),0.67,Grains & Cereals
+283,Wheat Bran,0.328798,Mixed Dishes
+284,Wheat Cooked,0.67,Grains & Cereals
+285,Wheat Germ,0.684287,Grains & Cereals
+286,Wheat Meal Cereal Unrefined,0.67,Grains & Cereals
+287,Wheat-Germ Cereal Toasted,0.67,Grains & Cereals
+288,Whole-Wheat,0.67,Grains & Cereals
+289,Wine,1.79,Beverages
+290,With Tomatoes And Cheese,9.29,Grains & Cereals
