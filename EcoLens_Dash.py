@@ -781,9 +781,9 @@ st.markdown("""
 [data-testid="collapsedControl"] {
   visibility: hidden !important;
 }
-[data-testid="collapsedControl"] svg {
-  width: 16px !important;
-  height: 16px !important;
+header[data-testid="stHeader"] button span {
+  visibility: hidden !important;
+  font-size: 0 !important;
 }
 button[data-testid="baseButton-headerNoPadding"] {
   font-size: 0 !important;
