@@ -777,9 +777,9 @@ for i, (title, cls, color, body) in enumerate(insights_data):
 st.markdown("""
 <style>
 /* Fix 1: Hide keyboard_double icon text */
+/* Sembunyiin collapse button sepenuhnya */
 [data-testid="collapsedControl"] {
-  font-size: 0 !important;
-  line-height: 0 !important;
+  visibility: hidden !important;
 }
 [data-testid="collapsedControl"] svg {
   width: 16px !important;
