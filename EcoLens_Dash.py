@@ -777,50 +777,40 @@ for i, (title, cls, color, body) in enumerate(insights_data):
 st.markdown("""
 <style>
 
-/* top header */
+/* hide streamlit header */
 header[data-testid="stHeader"] {
     visibility: hidden;
     height: 0px;
 }
 
-/* hamburger menu */
+/* hide menu */
 #MainMenu {
     visibility: hidden;
 }
 
-/* footer */
+/* hide footer */
 footer {
     visibility: hidden;
 }
 
-/* dataframe container */
-[data-testid="stDataFrame"] {
-    background-color: white !important;
-    border-radius: 12px !important;
-    overflow: hidden !important;
+/* remove top-right deploy/share widgets */
+[data-testid="stDecoration"] {
+    display: none !important;
 }
 
-/* header */
-[data-testid="stDataFrame"] thead th {
-    background-color: #f1f5f9 !important;
-    color: black !important;
-    font-weight: 600 !important;
+[data-testid="stToolbar"] {
+    display: none !important;
 }
 
-/* body cells */
-[data-testid="stDataFrame"] tbody td {
-    background-color: white !important;
-    color: black !important;
+div[data-testid="stStatusWidget"] {
+    display: none !important;
 }
 
-/* remove weird dark overlay */
-.glideDataEditor {
-    background: white !important;
-}
-
-/* scrollbar area */
-[data-testid="stDataFrame"] div {
-    background-color: white !important;
+/* safari weird text bug */
+body::before,
+body::after {
+    display: none !important;
+    content: none !important;
 }
 
 </style>
