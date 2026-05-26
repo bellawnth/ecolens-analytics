@@ -776,31 +776,12 @@ for i, (title, cls, color, body) in enumerate(insights_data):
 
 st.markdown("""
 <style>
-/* Fix 1: Hide keyboard_double icon text */
-/* Sembunyiin collapse button sepenuhnya */
-[data-testid="collapsedControl"] {
-  visibility: hidden !important;
-}
-header[data-testid="stHeader"] button span {
-  visibility: hidden !important;
-  font-size: 0 !important;
-}
-button[data-testid="baseButton-headerNoPadding"] {
-  font-size: 0 !important;
-}
-/* Target the icon text directly */
-[data-testid="stSidebarCollapsedControl"] span,
-[data-testid="collapsedControl"] span {
+/* Fix keyboard_double - hide header entirely */
+header[data-testid="stHeader"] {
   display: none !important;
 }
-.eyeqlp51 {
-  font-size: 0 !important;
-}
-/* Nuclear option - hide any text inside collapse button */
-header button span[class] {
-  font-size: 0 !important;
-  color: transparent !important;
-  visibility: hidden !important;
+#MainMenu {
+  display: none !important;
 }
 
 /* Fix 2: Dataframe context menu */
