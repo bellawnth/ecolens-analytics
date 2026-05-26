@@ -774,6 +774,8 @@ for i, (title, cls, color, body) in enumerate(insights_data):
           <div class="insight-body">{body}</div>
         </div>""", unsafe_allow_html=True)
 
+st.markdown("""
+<style>
 /* Fix 1: Hide keyboard_double icon text */
 [data-testid="collapsedControl"] {
   overflow: hidden !important;
@@ -806,6 +808,8 @@ for i, (title, cls, color, body) in enumerate(insights_data):
 }
 
 footer { visibility:hidden; }
+</style>
+""", unsafe_allow_html=True)
 # ── Footer ────────────────────────────────────────────────────────────────────
 st.markdown("---")
 st.markdown("""
