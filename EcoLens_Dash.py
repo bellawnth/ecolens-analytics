@@ -778,12 +778,29 @@ st.markdown("""
 <style>
 /* Fix 1: Hide keyboard_double icon text */
 [data-testid="collapsedControl"] {
-  overflow: hidden !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+}
+[data-testid="collapsedControl"] svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+button[data-testid="baseButton-headerNoPadding"] {
   font-size: 0 !important;
 }
-.material-icons, .material-symbols-outlined {
-  font-size: 20px !important;
-  line-height: 1 !important;
+/* Target the icon text directly */
+[data-testid="stSidebarCollapsedControl"] span,
+[data-testid="collapsedControl"] span {
+  display: none !important;
+}
+.eyeqlp51 {
+  font-size: 0 !important;
+}
+/* Nuclear option - hide any text inside collapse button */
+header button span[class] {
+  font-size: 0 !important;
+  color: transparent !important;
+  visibility: hidden !important;
 }
 
 /* Fix 2: Dataframe context menu */
