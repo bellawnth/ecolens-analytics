@@ -777,47 +777,52 @@ for i, (title, cls, color, body) in enumerate(insights_data):
 st.markdown("""
 <style>
 
-/* hide streamlit header cleanly */
+/* top header */
 header[data-testid="stHeader"] {
     visibility: hidden;
     height: 0px;
 }
 
-/* hide menu */
+/* hamburger menu */
 #MainMenu {
     visibility: hidden;
 }
 
-/* hide footer */
+/* footer */
 footer {
     visibility: hidden;
 }
 
-</style>
-""", unsafe_allow_html=True)
-
-/* Fix 2: Dataframe context menu */
-.portal > div,
-[class*="gdg-"] [role="menu"],
-.click-outside-ignore {
-  z-index: 9999 !important;
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
-  font-size: 13px !important;
-  background: white !important;
-  color: #0d2116 !important;
-  border: 1px solid #c8e6d4 !important;
-  border-radius: 10px !important;
-  box-shadow: 0 4px 20px rgba(10,79,46,.15) !important;
-  padding: 4px !important;
-}
-[class*="gdg-"] [role="menuitem"],
-.click-outside-ignore > div {
-  padding: 6px 12px !important;
-  border-radius: 6px !important;
-  white-space: nowrap !important;
+/* dataframe container */
+[data-testid="stDataFrame"] {
+    background-color: white !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
 }
 
-footer { visibility:hidden; }
+/* header */
+[data-testid="stDataFrame"] thead th {
+    background-color: #f1f5f9 !important;
+    color: black !important;
+    font-weight: 600 !important;
+}
+
+/* body cells */
+[data-testid="stDataFrame"] tbody td {
+    background-color: white !important;
+    color: black !important;
+}
+
+/* remove weird dark overlay */
+.glideDataEditor {
+    background: white !important;
+}
+
+/* scrollbar area */
+[data-testid="stDataFrame"] div {
+    background-color: white !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
 # ── Footer ────────────────────────────────────────────────────────────────────
