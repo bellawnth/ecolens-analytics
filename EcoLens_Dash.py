@@ -776,13 +776,25 @@ for i, (title, cls, color, body) in enumerate(insights_data):
 
 st.markdown("""
 <style>
-/* Fix keyboard_double - hide header entirely */
+
+/* hide streamlit header cleanly */
 header[data-testid="stHeader"] {
-  display: none !important;
+    visibility: hidden;
+    height: 0px;
 }
+
+/* hide menu */
 #MainMenu {
-  display: none !important;
+    visibility: hidden;
 }
+
+/* hide footer */
+footer {
+    visibility: hidden;
+}
+
+</style>
+""", unsafe_allow_html=True)
 
 /* Fix 2: Dataframe context menu */
 .portal > div,
