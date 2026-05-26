@@ -774,32 +774,19 @@ for i, (title, cls, color, body) in enumerate(insights_data):
           <div class="insight-body">{body}</div>
         </div>""", unsafe_allow_html=True)
 
-/* ── Fix 1: Hide Material Icon text di sidebar toggle ── */
+/* Fix 1: Hide keyboard_double icon text */
 [data-testid="collapsedControl"] {
+  overflow: hidden !important;
   font-size: 0 !important;
 }
-[data-testid="collapsedControl"] svg {
-  width: 20px !important;
-  height: 20px !important;
-}
-/* Fallback: sembunyikan teks keyboard_double_arrow */
-button[kind="header"] span,
-[data-testid="baseButton-header"] span {
-  font-size: 0 !important;
-}
-.material-icons,
-.material-symbols-outlined {
+.material-icons, .material-symbols-outlined {
   font-size: 20px !important;
   line-height: 1 !important;
 }
 
-/* ── Fix 2: Dataframe context menu z-index & layout ── */
-[data-testid="stDataFrame"] .dvn-scroller {
-  overflow: visible !important;
-}
+/* Fix 2: Dataframe context menu */
 .portal > div,
 [class*="gdg-"] [role="menu"],
-[data-testid="glide-cell-overlay"],
 .click-outside-ignore {
   z-index: 9999 !important;
   font-family: 'Plus Jakarta Sans', sans-serif !important;
@@ -815,13 +802,10 @@ button[kind="header"] span,
 .click-outside-ignore > div {
   padding: 6px 12px !important;
   border-radius: 6px !important;
-  color: #0d2116 !important;
-  font-size: 13px !important;
   white-space: nowrap !important;
 }
-[class*="gdg-"] [role="menuitem"]:hover {
-  background: #d6f7e6 !important;
-}
+
+footer { visibility:hidden; }
 # ── Footer ────────────────────────────────────────────────────────────────────
 st.markdown("---")
 st.markdown("""
