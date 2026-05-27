@@ -800,12 +800,6 @@ for i, (title, cls, color, body) in enumerate(insights_data):
 st.markdown("""
 <style>
 
-/* hide streamlit header */
-header[data-testid="stHeader"] {
-    visibility: hidden;
-    height: 0px;
-}
-
 /* hide menu */
 #MainMenu {
     visibility: hidden;
@@ -818,14 +812,6 @@ footer {
 
 /* remove top-right deploy/share widgets */
 [data-testid="stDecoration"] {
-    display: none !important;
-}
-
-[data-testid="stToolbar"] {
-    display: none !important;
-}
-
-div[data-testid="stStatusWidget"] {
     display: none !important;
 }
 
