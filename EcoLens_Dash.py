@@ -822,6 +822,69 @@ body::after {
     content: none !important;
 }
 
+/* =========================
+   FORCE LIGHT MODE
+========================= */
+
+html, body, .stApp {
+    background: #f2f8f4 !important;
+    color: #0d2116 !important;
+}
+
+/* =========================
+   SIDEBAR FIX
+========================= */
+
+section[data-testid="stSidebar"] {
+    background: linear-gradient(
+        180deg,
+        #e8f5ec 0%,
+        #dff3e5 100%
+    ) !important;
+
+    border-right: 1px solid #c8e6d4;
+}
+
+section[data-testid="stSidebar"] * {
+    color: #0d2116 !important;
+}
+
+/* selectbox */
+section[data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] > div {
+    background: white !important;
+    color: #0d2116 !important;
+    border: 1px solid #c8e6d4 !important;
+}
+
+/* =========================
+   DATAFRAME FIX
+========================= */
+
+[data-testid="stDataFrame"] {
+    background: white !important;
+    border-radius: 12px !important;
+    border: 1px solid #dbe7df !important;
+}
+
+[data-testid="stDataFrame"] table {
+    background: white !important;
+    color: #0d2116 !important;
+}
+
+[data-testid="stDataFrame"] th {
+    background: #f1f5f9 !important;
+    color: #0d2116 !important;
+}
+
+[data-testid="stDataFrame"] td {
+    background: white !important;
+    color: #0d2116 !important;
+}
+
+[data-testid="stDataFrame"] tr:hover td {
+    background: #f6fbf7 !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
 # ── Footer ────────────────────────────────────────────────────────────────────
