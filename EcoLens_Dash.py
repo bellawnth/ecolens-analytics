@@ -700,7 +700,12 @@ def emission_level(x):
 
 # ── Display Data ───────────────────────────────────────
 
-max_rows = st.slider("Rows to display", 25, len(show_df), len(show_df))
+max_rows = st.slider(
+    "Rows to display",
+    min_value=1,
+    max_value=max(1, len(show_df)),
+    value=min(25, len(show_df))
+)
 
 disp = show_df[
     ["nama", "kategori", "emisi"]
