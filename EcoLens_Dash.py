@@ -410,35 +410,25 @@ bottom_items = filtered.nsmallest(top_n, "emisi").reset_index(drop=True)
 
 # ── Gradient Colors ───────────────────────────────────────────────────────────
 
-# High emitters → dark red to soft orange
-TOP_GRADIENT = [
-    "#B71C1C",  # dark red
-    "#D84343",  # red
-    "#EF7777",  # soft coral
-    "#F4A261",  # orange
-    "#FFD166",  # warm yellow
-]
+from plotly.colors import n_colors
 
-# Low emitters → soft green to dark green
-BOTTOM_GRADIENT = [
-    "#D8F3DC",  # very light green
-    "#B7E4C7",  # pastel green
-    "#95D5B2",  # mint green
-    "#52B788",  # medium green
-    "#2D6A4F",  # dark green
-]
+# ── Dynamic Gradient Colors ─────────────────────────────────────
 
-# Automatically repeat gradient colors if top_n > 5
-top_colors = [
-    TOP_GRADIENT[i % len(TOP_GRADIENT)]
-    for i in range(len(top_items))
-]
+# Highest emitters → dark red → orange → yellow
+top_colors = n_colors(
+    "rgb(120, 0, 0)",      # very dark red
+    "rgb(255, 209, 102)",  # warm yellow
+    len(top_items),
+    colortype="rgb"
+)
 
-bot_colors = [
-    BOTTOM_GRADIENT[i % len(BOTTOM_GRADIENT)]
-    for i in range(len(bottom_items))
-]
-
+# Lowest emitters → light green → dark green
+bot_colors = n_colors(
+    "rgb(220, 245, 225)",  # soft mint
+    "rgb(0, 80, 35)",      # deep forest green
+    len(bottom_items),
+    colortype="rgb"
+)
 # ── Highest Emitters ──────────────────────────────────────────────────────────
 with r2a:
 
