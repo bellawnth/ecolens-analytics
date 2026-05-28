@@ -837,128 +837,39 @@ html, body, .stApp {
 section[data-testid="stSidebar"] {
     background: linear-gradient(
         180deg,
-        #062e12 0%,
-        #0b4419 50%,
-        #145a1a 100%
+        #0f5d1f 0%,
+        #1b7a2a 100%
     ) !important;
 
-    border-right: 1px solid #1f6b2a;
+    border-right: 1px solid #145a1a;
 }
 
-/* ALL SIDEBAR TEXT WHITE */
+/* ALL SIDEBAR TEXT */
 section[data-testid="stSidebar"] * {
     color: white !important;
 }
 
-/* =========================
-   SELECTBOX
-========================= */
-
-section[data-testid="stSidebar"] 
-.stSelectbox div[data-baseweb="select"] > div {
-
-    background: rgba(255,255,255,0.08) !important;
+/* SELECTBOX */
+section[data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] > div {
+    background: rgba(255,255,255,0.12) !important;
     color: white !important;
-
-    border: 1px solid rgba(255,255,255,0.18) !important;
-    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.25) !important;
 }
 
-/* dropdown arrow */
+/* SELECTBOX DROPDOWN ARROW */
 section[data-testid="stSidebar"] svg {
     fill: white !important;
 }
 
-/* =========================
-   SLIDER
-========================= */
-
+/* SLIDER */
 section[data-testid="stSidebar"] .stSlider * {
     color: white !important;
 }
 
-/* =========================
-   CHECKBOX
-========================= */
-
+/* CHECKBOX */
 section[data-testid="stSidebar"] .stCheckbox label {
     color: white !important;
 }
-
-/* =========================
-   INPUT LABELS
-========================= */
-
-section[data-testid="stSidebar"] label {
-    color: white !important;
-}
-
-/* =========================
-   MARKDOWN / HEADERS
-========================= */
-
-section[data-testid="stSidebar"] h1,
-section[data-testid="stSidebar"] h2,
-section[data-testid="stSidebar"] h3,
-section[data-testid="stSidebar"] h4,
-section[data-testid="stSidebar"] h5,
-section[data-testid="stSidebar"] h6,
-section[data-testid="stSidebar"] p,
-section[data-testid="stSidebar"] span,
-section[data-testid="stSidebar"] div {
-    color: white !important;
-}
-
-/* =========================
-   TOP HEADER
-========================= */
-
-header[data-testid="stHeader"] {
-    background: #062e12 !important;
-}
-
-/* =========================
-   REMOVE WHITE GAP
-========================= */
-
-[data-testid="stSidebarContent"] {
-    background: transparent !important;
-}
-
-</style>
-""", unsafe_allow_html=True)
-
-/* =========================
-   DATAFRAME FIX
-========================= */
-
-[data-testid="stDataFrame"] {
-    background: white !important;
-    border-radius: 12px !important;
-    border: 1px solid #dbe7df !important;
-}
-
-[data-testid="stDataFrame"] table {
-    background: white !important;
-    color: #0d2116 !important;
-}
-
-[data-testid="stDataFrame"] th {
-    background: #f1f5f9 !important;
-    color: #0d2116 !important;
-}
-
-[data-testid="stDataFrame"] td {
-    background: white !important;
-    color: #0d2116 !important;
-}
-
-[data-testid="stDataFrame"] tr:hover td {
-    background: #f6fbf7 !important;
-}
-
-</style>
-""", unsafe_allow_html=True)
 # ── Footer ────────────────────────────────────────────────────────────────────
 st.markdown("---")
 st.markdown("""
