@@ -883,6 +883,10 @@ section[data-testid="stSidebar"] p,
 section[data-testid="stSidebar"] span {
     color: white !important;
 }
+
+</style>
+""", unsafe_allow_html=True)
+
 # ── Footer ────────────────────────────────────────────────────────────────────
 st.markdown("---")
 st.markdown("""
