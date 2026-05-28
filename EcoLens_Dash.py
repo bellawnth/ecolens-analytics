@@ -821,7 +821,6 @@ body::after {
     display: none !important;
     content: none !important;
 }
-
 /* =========================
    FORCE LIGHT MODE
 ========================= */
@@ -838,24 +837,43 @@ html, body, .stApp {
 section[data-testid="stSidebar"] {
     background: linear-gradient(
         180deg,
-        #e8f5ec 0%,
-        #dff3e5 100%
+        #1b5e20 0%,
+        #2e7d32 100%
     ) !important;
 
-    border-right: 1px solid #c8e6d4;
+    border-right: 1px solid #145a1a;
 }
 
+/* ALL SIDEBAR TEXT WHITE */
 section[data-testid="stSidebar"] * {
-    color: #0d2116 !important;
+    color: white !important;
 }
 
 /* selectbox */
 section[data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] > div {
-    background: white !important;
-    color: #0d2116 !important;
-    border: 1px solid #c8e6d4 !important;
+    background: rgba(255,255,255,0.12) !important;
+    color: white !important;
+    border: 1px solid rgba(255,255,255,0.25) !important;
 }
 
+/* dropdown text */
+section[data-testid="stSidebar"] .stSelectbox svg {
+    fill: white !important;
+}
+
+/* input labels */
+section[data-testid="stSidebar"] label {
+    color: white !important;
+}
+
+/* markdown / headers */
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3,
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] span {
+    color: white !important;
+}
 /* =========================
    DATAFRAME FIX
 ========================= */
