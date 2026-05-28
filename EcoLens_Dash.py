@@ -268,7 +268,7 @@ with st.sidebar:
     st.markdown("---")
     all_cats = ["All Categories"] + sorted(df["kategori"].unique().tolist())
     sel_cat = st.selectbox("📂 Filter Category", all_cats)
-    top_n = st.slider("🏆 Top / Bottom N", 3, 15, 5)
+    top_n = st.slider("🏆 Top / Bottom N", 3, 10, 5)
     show_outliers = st.checkbox("Show extreme outliers (>30 kg)", value=True)
     st.markdown("---")
     st.markdown("**ℹ️ About EcoLens**")
