@@ -429,6 +429,14 @@ bot_colors = n_colors(
     len(bottom_items),
     colortype="rgb"
 )
+
+# Lowest emitters → light green → dark green
+bot_colors = n_colors(
+    "rgb(220, 245, 225)",  # soft mint
+    "rgb(0, 80, 35)",      # deep forest green
+    len(bottom_items),
+    colortype="rgb"
+)
 # ── Highest Emitters ──────────────────────────────────────────────────────────
 with r2a:
 
