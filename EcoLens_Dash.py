@@ -647,7 +647,7 @@ c1, c2 = st.columns([3, 1])
 with c1:
     search = st.text_input(
         "🔍 Search food item",
-        placeholder="e.g. chicken, tofu, beef…"
+        placeholder="e.g. bread, tofu, beef…"
     )
 
 with c2:
