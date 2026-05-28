@@ -428,9 +428,16 @@ BOTTOM_GRADIENT = [
     "#2D6A4F",  # dark green
 ]
 
-# Automatically adjust if top_n changes
-top_colors = TOP_GRADIENT[:len(top_items)]
-bot_colors = BOTTOM_GRADIENT[:len(bottom_items)]
+# Automatically repeat gradient colors if top_n > 5
+top_colors = [
+    TOP_GRADIENT[i % len(TOP_GRADIENT)]
+    for i in range(len(top_items))
+]
+
+bot_colors = [
+    BOTTOM_GRADIENT[i % len(BOTTOM_GRADIENT)]
+    for i in range(len(bottom_items))
+]
 
 # ── Highest Emitters ──────────────────────────────────────────────────────────
 with r2a:
