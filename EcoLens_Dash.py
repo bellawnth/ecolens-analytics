@@ -831,47 +831,43 @@ html, body, .stApp {
 }
 
 /* =========================
-   SIDEBAR FIX
+   SIDEBAR
 ========================= */
 
 section[data-testid="stSidebar"] {
     background: linear-gradient(
         180deg,
-        #1b5e20 0%,
-        #2e7d32 100%
+        #0f5d1f 0%,
+        #1b7a2a 100%
     ) !important;
 
     border-right: 1px solid #145a1a;
 }
 
-/* ALL SIDEBAR TEXT WHITE */
+/* ALL SIDEBAR TEXT */
 section[data-testid="stSidebar"] * {
     color: white !important;
 }
 
-/* selectbox */
+/* SELECTBOX */
 section[data-testid="stSidebar"] .stSelectbox div[data-baseweb="select"] > div {
     background: rgba(255,255,255,0.12) !important;
     color: white !important;
     border: 1px solid rgba(255,255,255,0.25) !important;
 }
 
-/* dropdown text */
-section[data-testid="stSidebar"] .stSelectbox svg {
+/* SELECTBOX DROPDOWN ARROW */
+section[data-testid="stSidebar"] svg {
     fill: white !important;
 }
 
-/* input labels */
-section[data-testid="stSidebar"] label {
+/* SLIDER */
+section[data-testid="stSidebar"] .stSlider * {
     color: white !important;
 }
 
-/* markdown / headers */
-section[data-testid="stSidebar"] h1,
-section[data-testid="stSidebar"] h2,
-section[data-testid="stSidebar"] h3,
-section[data-testid="stSidebar"] p,
-section[data-testid="stSidebar"] span {
+/* CHECKBOX */
+section[data-testid="stSidebar"] .stCheckbox label {
     color: white !important;
 }
 /* =========================
