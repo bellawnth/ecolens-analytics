@@ -412,28 +412,18 @@ bottom_items = filtered.nsmallest(top_n, "emisi").reset_index(drop=True)
 
 from plotly.colors import n_colors
 
-# ── Dynamic Gradient Colors ─────────────────────────────────────
-
-# Highest emitters → dark red → orange → yellow
+# Highest → strong red to warm gold
 top_colors = n_colors(
-    "rgb(120, 0, 0)",      # very dark red
-    "rgb(255, 209, 102)",  # warm yellow
+    "rgb(190, 20, 20)",      # bold red
+    "rgb(255, 196, 70)",     # warm gold
     len(top_items),
     colortype="rgb"
 )
 
-# Lowest emitters → light green → dark green
+# Lowest → vivid green to emerald
 bot_colors = n_colors(
-    "rgb(220, 245, 225)",  # soft mint
-    "rgb(0, 80, 35)",      # deep forest green
-    len(bottom_items),
-    colortype="rgb"
-)
-
-# Lowest emitters → light green → dark green
-bot_colors = n_colors(
-    "rgb(220, 245, 225)",  # soft mint
-    "rgb(0, 80, 35)",      # deep forest green
+    "rgb(120, 210, 140)",    # bright green
+    "rgb(0, 150, 70)",       # emerald green
     len(bottom_items),
     colortype="rgb"
 )
