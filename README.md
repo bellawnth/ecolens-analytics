@@ -1,4 +1,4 @@
-# 🌱 EcoLens: Food Carbon Footprint Dashboard
+# EcoLens: Food Carbon Footprint Dashboard
 AI-driven sustainable consumption dashboard for food carbon footprint analysis and environmental impact visualization
 
 🔗 **Link Dashboard:**
@@ -8,7 +8,8 @@ AI-driven sustainable consumption dashboard for food carbon footprint analysis a
 
 # 📌 Deskripsi Proyek
 
-isi
+Merupakan dashboard analitik interaktif berbasis data yang dikembangkan untuk menganalisis jejak karbon (*carbon footprint*) dari berbagai jenis makanan guna meningkatkan *awareness* terhadap *sustainable consumption*. Proyek ini berangkat dari permasalahan masih terbatasnya akses informasi terkait dampak lingkungan dari konsumsi sehari-hari. Dashboard ini tidak hanya menampilkan besaran emisi CO₂e tiap makanan tetapi juga mengeksplorasi distribusi emisi antar kategori pangan, pola kontribusi karbon serta rekomendasi alternatif makanan yang lebih ramah lingkungan melalui visualisasi data interaktif. Dengan pendekatan *data-drive*n dan *exploratory data analysis (EDA)* dan *explanatory data analysis*, dashboard ini dirancang untuk membantu pengguna memahami hubungan antara pola konsumsi dan dampak lingkungan secara lebih intuitif, informatif dan praktis.
+
 ---
 
 # 📚 Library yang Digunakan
